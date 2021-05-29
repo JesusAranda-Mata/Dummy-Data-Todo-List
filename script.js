@@ -27,12 +27,16 @@
     }
     
     const populateTodos = () => {
-        const newLi = document.createElement("LI")
-        //---console.log(newLi)
-        const text = document.createTextNode(arrayOfTodos[0].title)
-        newLi.appendChild(text)
-        todoID.appendChild(newLi)
-        console.log(newLi)
+        for (let index = 0; index < arrayOfTodos.length; index++) {
+            const element = arrayOfTodos[index];
+            console.log(element.title)
+            const newLi = document.createElement("LI")
+            //---console.log(newLi)
+            const text = document.createTextNode(arrayOfTodos[0].title)
+            newLi.appendChild(text)
+            todoID.appendChild(newLi)
+            console.log(newLi)
+        }
     }
 
     // console.log(arrayOfTodos[0].userId)
