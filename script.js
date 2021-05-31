@@ -64,6 +64,7 @@ const populateTodos = (data) => {
     let filtering = document.getElementById('filtering')
 
     const filterBTN = () => {
+    arrayOfTodos => arrayOfTodos.length = 0;
     //console.log ('filtering', filtering.value)
     arrayOfTodos = arrayOfTodos.filter(todo => {
         //console.log("todo", todo)
