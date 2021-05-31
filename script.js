@@ -35,9 +35,21 @@
             const text = document.createTextNode(arrayOfTodos[0].title)
             newLi.appendChild(text)
             todoID.appendChild(newLi)
-            console.log(newLi)
+            //---console.log(newLi)
         }
     }
+
+/* -------same as above ^^^^ ----------
+const populateTodos = (data) => {
+    const todoID = document.getElementById('todo-List')
+    data.forEach(todo => {
+        let newLi = document.createElement('LI')
+        let text = document.createTextNode(todo.title)
+        li.appendChild(text)
+        todoID.appendChild(newLi)
+    })
+} 
+-----*/
 
     // console.log(arrayOfTodos[0].userId)
     // console.log(arrayOfTodos[1].userId)
@@ -47,7 +59,29 @@
     
     const todoID = document.getElementById('todo-List')
     //---console.log(todoID)
+     
+    let newID = ""
+    let filtering = document.getElementById('filtering')
+
+    const filterBTN = () => {
+    //console.log ('filtering', filtering.value)
+    arrayOfTodos = arrayOfTodos.filter(todo => {
+        //console.log("todo", todo)
+        return todo.userId == filtering.value
+    })
+    populateTodos()
+    //console.log('filteredTodosArray', filteredTodosArray)
+    }
+    //console.log('filteredTodos', filteredTodos)
     
-    //let Dlist = () => {
+    
+    
+    
+
+    
+   
+
+     
         
-   // }  
+    
+    
