@@ -75,6 +75,9 @@ const populateTodos = (data) => {
     //console.log('filteredTodosArray', filteredTodosArray)
     }
     //console.log('filteredTodos', filteredTodos)
+    const olClear = () => {
+        todoID.innerHTML=""
+    }
     
     
     
