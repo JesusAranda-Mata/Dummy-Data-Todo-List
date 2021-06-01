@@ -29,7 +29,7 @@
     const populateTodos = () => {
         for (let index = 0; index < arrayOfTodos.length; index++) {
             const element = arrayOfTodos[index];
-            console.log(element.title)
+            //---console.log(element.title)
             const newLi = document.createElement("LI")
             //---console.log(newLi)
             const text = document.createTextNode(arrayOfTodos[0].title)
@@ -66,21 +66,33 @@ const populateTodos = (data) => {
     const filterBTN = () => {
     todoID.innerHTML=""
     arrayOfTodos => arrayOfTodos.length = 0;
-    //console.log ('filtering', filtering.value)
+    //---console.log ('filtering', filtering.value)
     arrayOfTodos = arrayOfTodos.filter(todo => {
-        //console.log("todo", todo)
+    //---console.log("todo", todo)
         return todo.userId == filtering.value
     })
     populateTodos()
-    //console.log('filteredTodosArray', filteredTodosArray)
-    }
-    //console.log('filteredTodos', filteredTodos)
+    //console.log('filterBTN', filterBTN)
+    };
+    //console.log('filterBTN', filterBTN)
+    
     const olClear = () => {
         todoID.innerHTML=""
     }
     
-    
-    
+    const completed = () => {
+        todoID.innerHTML=""
+        arrayOfTodos => arrayOfTodos.length = 0;
+        //---console.log ('filtering', filtering.value)
+        arrayOfTodos = arrayOfTodos.filter(todo => {
+            console.log("todo", todo)
+            return todo.completed == filtering.value
+        })
+        populateTodos()
+        console.log('completed', completed)
+        }
+        console.log('completed', completed)
+       
     
 
     
