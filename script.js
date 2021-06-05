@@ -14,7 +14,9 @@
         "completed": false
     }]
 
+
     
+
     
     const fetchTodos = () => {
         fetch('https://jsonplaceholder.typicode.com/todos')
@@ -27,6 +29,7 @@
     }
     
     const populateTodos = () => {
+
         for (let index = 0; index < arrayOfTodos.length; index++) {
             const element = arrayOfTodos[index];
             console.log(element.title)
@@ -51,3 +54,4 @@
     //let Dlist = () => {
         
    // }  
+
