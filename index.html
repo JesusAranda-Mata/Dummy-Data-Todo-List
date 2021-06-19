@@ -4,13 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+ filtering
     <title>Dummy Data</title>
 </head>
 <body>
+    <section id="reset-all">
     <button id="fetchTodos" onclick="fetchTodos(this)">Fetch Todos</button>
     <button id="logTodos" onclick="logTodos(this)">Log Todos</button>
     <button id="populateTodos" onclick="populateTodos(this)">Populate Todos</button>
+    <label for="userID">User ID</label>
+    </section>
+    <section id="notAform">
+        <input type="number" id="filtering" name="userID" min="1" max="10">
+        <button id="resetArray" onclick="filterBTN()">Filter New ID</button>
+    </section>
+    <div>
+        <button id="olClear" onclick="olClear()">Clear list</button>
+    </div>
+    <div>
+        <button id="colpeted" onclick="completed()">completed</button>
+    </div>
     <ol id="todo-List">
 
     <!-- LIs will go here -->
