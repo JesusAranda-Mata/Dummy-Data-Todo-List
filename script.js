@@ -14,7 +14,11 @@
         "completed": false
     }]
 
+
+
     
+
+ ch/addToDOM
     
     const fetchTodos = () => {
         fetch('https://jsonplaceholder.typicode.com/todos')
@@ -27,14 +31,18 @@
     }
     
     const populateTodos = () => {
+
+
         for (let index = 0; index < arrayOfTodos.length; index++) {
             const element = arrayOfTodos[index];
-            //---console.log(element.title)
+            console.log(element.title)
+ ch/addToDOM
             const newLi = document.createElement("LI")
             //---console.log(newLi)
             const text = document.createTextNode(arrayOfTodos[0].title)
             newLi.appendChild(text)
             todoID.appendChild(newLi)
+
             //---console.log(newLi)
         }
     }
@@ -51,6 +59,12 @@ const populateTodos = (data) => {
 } 
 -----*/
 
+
+            console.log(newLi)
+        }
+    }
+
+ ch/addToDOM
     // console.log(arrayOfTodos[0].userId)
     // console.log(arrayOfTodos[1].userId)
 
@@ -59,46 +73,9 @@ const populateTodos = (data) => {
     
     const todoID = document.getElementById('todo-List')
     //---console.log(todoID)
-     
-    let newID = ""
-    let filtering = document.getElementById('filtering')
-
-    const filterBTN = () => {
-    todoID.innerHTML=""
-    arrayOfTodos => arrayOfTodos.length = 0;
-    //---console.log ('filtering', filtering.value)
-    arrayOfTodos = arrayOfTodos.filter(todo => {
-    //---console.log("todo", todo)
-        return todo.userId == filtering.value
-    })
-    populateTodos()
-    //console.log('filterBTN', filterBTN)
-    };
-    //console.log('filterBTN', filterBTN)
     
-    const olClear = () => {
-        todoID.innerHTML=""
-    }
-    
-    const completed = () => {
-        todoID.innerHTML=""
-        arrayOfTodos => arrayOfTodos.length = 0;
-        //---console.log ('filtering', filtering.value)
-        arrayOfTodos = arrayOfTodos.filter(todo => {
-            console.log("todo", todo)
-            return todo.completed == filtering.value
-        })
-        populateTodos()
-        console.log('completed', completed)
-        }
-        console.log('completed', completed)
-       
-    
-
-    
-   
-
-     
+    //let Dlist = () => {
         
-    
-    
+   // }  
+
+ ch/addToDOM
